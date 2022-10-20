@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <form name="order" method="post" action="/submit">
+        <h1>Order Form</h1>
+        <!--Sección de contacto-->
+        <fieldset>
+            <h2>Contact Details</h2>
+            <!--<legend>Contact Details</legend>-->
+            <table>
+                <tr>
+                    <th>
+
+                    </th>
+                </tr>
+            </table>
+            <ul>
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Full Name</div>
+                        <input class="sepLabels" name="name" required autofocus>
+                    </label>
+                </li>
+                <li>
+                    <label class="required col-50">
+                        <div class="separador2">Email Address</div>
+                        <input class="sepLabels" type="email" name="email" required>
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label>
+                        <div class="separador2">Postal Address</div>
+                        <input class="sepLabels" name="address1" placeholder="Address Line 1">
+                    </label>
+                    <div>&nbsp;</div>
+                    <input class="col-30" name="address2" placeholder="Address Line 2">
+                    <div id="separador">&nbsp;</div>
+                    <div id="agrupador">
+                        <input class="tinputs" name="city" class="city" placeholder="Town/City">
+                        <input class="tinputs" name="state" class="state" placeholder="State">
+                        <input class="tinputs" name="zip" class="zip" placeholder="Zip Code">
+                    </div>
+
+                    <div id="separador">&nbsp;</div>
+                    <select class="col-30" name="country">
+                        <option value="0">Country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                </li>
+                <br>
+                <li class="col-50">
+                    <label>
+                        <div class="separador2">Home Phone No.</div>
+                        <input class="sepLabels" type="tel" name="homephone">
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label>
+                        <div class="separador2">Cell Phone No.</div>
+                        <input  class="sepLabels" type="tel" name="cellphone">
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label>
+                        <div class="separador2">Skype Name</div>
+                        <input  class="sepLabels" name="skype">
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label>
+                        <div class="separador2">Twitter</div>
+                        <span class="twitter_prefix">@</span>
+                        <input id="sepLabels2" name="twitter" class="twitter">
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <hr>
+        <!--Seccion de login-->
+        <fieldset>
+            <h2>Login Details</h2>
+            <!--<legend>Login Details</legend>-->
+            <ul class="row">
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Password</div>
+                        <input  class="sepLabels" type="password" name="password" required>
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Confirm Password</div>
+                        <input  class="sepLabels" type="password" name="confirm_password" required>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <hr>
+        <!--Seccion de detalles de orden-->
+        <fieldset>
+            <h2>Order Details</h2>
+            <!--<legend>Order Details</legend>-->
+            <table class="col-70">
+                <thead class="tabla">
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody class="fila">
+                    <tr>
+                        <td>
+                            COMP001
+                            <input type="hidden" name="product_code" value="COMP001">
+                        </td>
+                        <td>The Ultimate Smartphone</td>
+                        <td>
+                            <input type="number" data-price="399.99" name="quantity" value="0" min="0" max="99"
+                                maxlength="2">
+                        </td>
+                        <td>$399.99</td>
+                        <td>
+                            <output name="item_total" class="item_total">$0.00</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            COMP002
+                            <input type="hidden" name="product_code" value="COMP002">
+                        </td>
+                        <td>The Ultimate Tablet</td>
+                        <td>
+                            <input type="number" data-price="499.99" name="quantity" value="0" min="0" max="99"
+                                maxlength="2">
+                        </td>
+                        <td>$499.99</td>
+                        <td>
+                            <output name="item_total" class="item_total">$0.00</output>
+                        </td>
+                    </tr>
+                    <td>
+                        COMP003
+                        <input type="hidden" name="product_code" value="COMP003">
+                    </td>
+                    <td>The Ultimate Netbook</td>
+                    <td>
+                        <input type="number" data-price="299.99" name="quantity" value="0" min="0" max="99"
+                            maxlength="2">
+                    </td>
+                    <td>$299.99</td>
+                    <td>
+                        <output name="item_total" class="item_total">$0.00</output>
+                    </td>
+                    </tr>
+                </tbody>
+                <tfoot class="total">
+                    <tr>
+                        <td colspan="4">Order Total</td>
+                        <td>
+                            <output name="order_total" id="order_total">$0.00</output>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </fieldset>
+        <hr>
+        <!--Seccion de detalles de pago-->
+        <fieldset>
+            <h2>Payment Details</h2>
+            <!--<legend>Payment Details</legend>-->
+            <ul class="row">
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Name on Card</div>
+                        <input class="sepLabels" name="card_name" required>
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Credit Card No.</div>
+                        <input class="sepLabels" name="card_number" pattern="[0-9]{13,16}" maxlength="16" required
+                            title="13-16 digits, no spaces">
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">Expiry Date</div>
+                        <!--<input type="month" name="card_expiry" maxlength="7" placeholder="YYYY-MM" required
+                            value="2018-09">-->
+                        <input class="sepLabels" type="text" id="datepicker" name="card_expiry" maxlength="7"
+                            placeholder="YYYY-MM" required value="2018-09">
+                    </label>
+                </li>
+                <li class="col-50">
+                    <label class="required">
+                        <div class="separador2">CVV2 No.</div>
+                        <input id="sepLabels3" name="card_cvv2" class="cvv" maxlength="3" pattern="[0-9]{3}" required
+                            title="exactly 3 digits">
+                        <span>(Three digit code at back of card)</span>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <hr>
+        <div class="buttons">
+            <input class="botones" type="submit" value="Submit Order">
+            <input class="botones" type="submit" id="saveOrder" value="Save Order" formnovalidate formaction="/save">
+        </div>
+    </form>
+</body>
+
+</html>

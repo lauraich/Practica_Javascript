@@ -1,0 +1,121 @@
+form.invalid input:invalid,
+form.invalid select:invalid,
+form.invalid input.invalid,
+form.invalid select.invalid {
+    background-color: #FFD4D4;
+    border: 1px solid maroon;
+}
+
+input:required,
+select:required {
+    background-color: lightyellow;
+}
+
+body {
+    background-color: #8a8181;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    background-color: #cdc4c4;
+    border: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+hr {
+    border: 1px dashed;
+    color: #e0d7d7;
+    ;
+}
+
+.tabla {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(158, 76, 18);
+    color: white;
+}
+
+.fila {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 228, 196, 0.932);
+}
+
+.total {
+    background-color: rgb(198, 170, 138);
+}
+
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 15px;
+}
+
+.col-70 {
+    width: 70%;
+    margin-top: 6px;
+    display: table;
+    margin: auto;
+}
+
+.col-30 {
+    float: left;
+    width: 50%;
+    margin-left: 21%;
+}
+
+.buttons {
+    padding-top: 2%;
+    padding-left: 80%;
+    background-color: #cdc4c4;
+}
+
+.botones {
+    background-color: rgb(158, 76, 18);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: larger;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    width: 40%;
+}
+
+.tinputs {
+    float: left;
+    width: 18%;
+}
+
+.separador2 {
+    width: 20%;
+}
+
+.sepLabels {
+    width: 50%;
+}
+
+#separador {
+    width: 30%;
+}
+
+#agrupador {
+    margin-left: 20%;
+}
+
+#sepLabels2 {
+    width: 47%;
+}
+
+#sepLabels3 {
+    width: 20%;
+}
